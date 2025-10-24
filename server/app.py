@@ -14,9 +14,10 @@ CORS(app)
 # Configure Redis
 redis_client = redis.Redis(
     host=os.getenv('REDIS_HOST', 'localhost'),
-    port=int(os.getenv('REDIS_PORT', 6379)),
-    db=0,
-    decode_responses=True
+    port=os.getenv('REDIS_PORT', 6379),
+    decode_responses=True,
+    username=os.getenv('REDIS_USER', None),
+    password=os.getenv('REDIS_PASS', None)
 )
 
 WATER_GLASSES_REDIS_KEY = "glasses_of_water"
