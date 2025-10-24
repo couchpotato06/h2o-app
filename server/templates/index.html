@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Tracker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+        .water-box {
+            background-color: #2196F3;
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .water-box:hover {
+            transform: scale(1.02);
+        }
+        .count {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="water-box">
+        <h2>Water Glasses Today</h2>
+        <div class="count">{{ glasses }}</div>
+        <p>glasses of water</p>
+        <a href="/update" style="color: white; text-decoration: none; margin-top: 1rem; display: inline-block; border: 2px solid white; padding: 0.5rem 1rem; border-radius: 5px; transition: background-color 0.2s;">
+            Update Count
+        </a>
+    </div>
+</body>
+</html>

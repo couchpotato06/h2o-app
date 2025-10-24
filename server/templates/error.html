@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error - Water Tracker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+        }
+        .error-box {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #dc3545;
+            max-width: 400px;
+        }
+        .error-icon {
+            color: #dc3545;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-bottom: 1.5rem;
+        }
+        .home-link {
+            display: inline-block;
+            color: #2196F3;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid #2196F3;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: all 0.2s;
+        }
+        .home-link:hover {
+            background-color: #2196F3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-box">
+        <div class="error-icon">⚠️</div>
+        <h2>Oops! Something went wrong</h2>
+        <div class="error-message">
+            {{ error }}
+        </div>
+        <a href="/" class="home-link">Return to Home</a>
+    </div>
+</body>
+</html>
